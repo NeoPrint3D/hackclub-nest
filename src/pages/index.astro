@@ -10,8 +10,10 @@ import BaseLayout from "../layouts/base.astro";
       <section>
         <div class="flex flex-col gap-10 relative">
           <h1 class="text-5xl mt-16 max-w-[24ch]">
-            the free linux server by <span class="text-hackclub-red underline">
-              HackClub
+            free, powerful hosting for teens <span
+              class="text-hackclub-red underline"
+            >
+              Hack Club
             </span>
           </h1>
           <div class="relative w-full h-[21rem] p-3">
@@ -66,6 +68,69 @@ import BaseLayout from "../layouts/base.astro";
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="flex flex-col gap-10 mt-20">
+          <h2 class="text-3xl">Host Whatever</h2>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:grid-cols-4 xl:gap-20"
+          >
+            {
+              [
+                {
+                  title: "Websites",
+                  description:
+                    "Host your websites with no limits on bandwidth or storage.",
+                  icon: "lucide:globe",
+                },
+                {
+                  title: "APIs",
+                  description:
+                    "Host your APIs with no limits on bandwidth or storage.",
+                  icon: "lucide:code",
+                },
+                {
+                  title: "Databases",
+                  description:
+                    "Host your databases with no limits on bandwidth or storage.",
+                  icon: "lucide:database",
+                },
+                {
+                  title: "Bots",
+                  description:
+                    "Host your bots with no limits on bandwidth or storage.",
+                  icon: "lucide:bot",
+                },
+              ].map((item, i) => (
+                <div class="flex flex-col gap-2 border border-white/20 p-5 rounded-xl">
+                  <Icon class="text-primary" name={item.icon} size={24} />
+                  <h3 class="text-lg font-medium">{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex gap-10 my-20 items-center">
+          <h2 class="text-2xl max-w-[32ch]">
+            Powered by a <span class="font-semibold underline text-primary">
+              Hetzner EX44</span
+            > dedicated server located in <span class="flex items-center gap-2">
+              Helsinki, Finland
+              <Icon class="text-green-400" name={"lucide:earth"} size={24} />
+            </span>
+          </h2>
+          <Icon
+            class="text-gray-400 shadow-xl shadow-primary p-3 rounded-xl"
+            name={"lucide:server"}
+            size={128}
+          />
+        </div>
+      </section>
+
       <section>
         <div class="text-center">
           <h2 class="text-center text-3xl mt-10">
@@ -76,106 +141,36 @@ import BaseLayout from "../layouts/base.astro";
         <ul
           class="relative mt-20 justify-between w-full grid grid-cols-1 sm:grid-cols-2 gap-10 xl:grid-cols-4 xl:gap-20"
         >
-          <li
-            class="first:skew-y-[8deg] last:-skew-y-[8deg] first:-translate-y-8 last:-translate-y-8 h-64 w-60 bg-gray-900 rounded-xl shadow-xl relative"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/77029802?v=4"
-              alt="Hack Club logo"
-              class="rounded-full w-8 h-8 absolute -top-2 -right-2"
-            />
-            <img
-              src="/neo.png"
-              alt="Hack Club logo"
-              class="h-32 w-full rounded-xl"
-            />
+          {
+            Array(4)
+              .fill(0)
+              .map((_, i) => (
+                <li class="first:skew-y-[8deg] last:-skew-y-[8deg] first:-translate-y-8 last:-translate-y-8 h-64 w-60 bg-gray-900 rounded-xl shadow-xl relative">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/77029802?v=4"
+                    alt="Hack Club logo"
+                    class="rounded-full w-8 h-8 absolute -top-2 -right-2"
+                  />
+                  <img
+                    src="/neo.png"
+                    alt="Hack Club logo"
+                    class="h-32 w-full rounded-xl"
+                  />
 
-            <div class="flex flex-col p-3">
-              <h3 class="flex gap-1 items-center text-lg text-medium">
-                Neo Letter
-                <Icon name={"lucide:github"} />
-              </h3>
-              <p class="text-xs text-gray-500 underline">@NeoPrint3D</p>
-              <p class="mt-1 text-xs">
-                A multiplayer wordle game that you can play with your friends.
-              </p>
-            </div>
-          </li>
-          <li
-            class="-skew-y-[4deg] first:-translate-y-8 last:-translate-y-8 h-64 w-60 bg-gray-900 rounded-xl shadow-xl relative"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/77029802?v=4"
-              alt="Hack Club logo"
-              class="rounded-full w-8 h-8 absolute -top-2 -right-2"
-            />
-            <img
-              src="/neo.png"
-              alt="Hack Club logo"
-              class="h-32 w-full rounded-xl"
-            />
-
-            <div class="flex flex-col p-3">
-              <h3 class="flex gap-1 items-center text-lg text-medium">
-                Neo Letter
-                <Icon name={"lucide:github"} />
-              </h3>
-              <p class="text-xs text-gray-500 underline">@NeoPrint3D</p>
-              <p class="mt-1 text-xs">
-                A multiplayer wordle game that you can play with your friends.
-              </p>
-            </div>
-          </li>
-          <li
-            class="skew-y-[4deg] first:-translate-y-8 last:-translate-y-8 h-64 w-60 bg-gray-900 rounded-xl shadow-xl relative"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/77029802?v=4"
-              alt="Hack Club logo"
-              class="rounded-full w-8 h-8 absolute -top-2 -right-2"
-            />
-            <img
-              src="/neo.png"
-              alt="Hack Club logo"
-              class="h-32 w-full rounded-xl"
-            />
-
-            <div class="flex flex-col p-3">
-              <h3 class="flex gap-1 items-center text-lg text-medium">
-                Neo Letter
-                <Icon name={"lucide:github"} />
-              </h3>
-              <p class="text-xs text-gray-500 underline">@NeoPrint3D</p>
-              <p class="mt-1 text-xs">
-                A multiplayer wordle game that you can play with your friends.
-              </p>
-            </div>
-          </li>
-          <li
-            class="first:skew-y-[8deg] last:-skew-y-[8deg] first:-translate-y-8 last:-translate-y-8 h-64 w-60 bg-gray-900 rounded-xl shadow-xl relative"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/77029802?v=4"
-              alt="Hack Club logo"
-              class="rounded-full w-8 h-8 absolute -top-2 -right-2"
-            />
-            <img
-              src="/neo.png"
-              alt="Hack Club logo"
-              class="h-32 w-full rounded-xl"
-            />
-
-            <div class="flex flex-col p-3">
-              <h3 class="flex gap-1 items-center text-lg text-medium">
-                Neo Letter
-                <Icon name={"lucide:github"} />
-              </h3>
-              <p class="text-xs text-gray-500 underline">@NeoPrint3D</p>
-              <p class="mt-1 text-xs">
-                A multiplayer wordle game that you can play with your friends.
-              </p>
-            </div>
-          </li>
+                  <div class="flex flex-col p-3">
+                    <h3 class="flex gap-1 items-center text-lg text-medium">
+                      Neo Letter
+                      <Icon name={"lucide:github"} />
+                    </h3>
+                    <p class="text-xs text-gray-500 underline">@NeoPrint3D</p>
+                    <p class="mt-1 text-xs">
+                      A multiplayer wordle game that you can play with your
+                      friends.
+                    </p>
+                  </div>
+                </li>
+              ))
+          }
         </ul>
       </section>
 
@@ -200,6 +195,28 @@ import BaseLayout from "../layouts/base.astro";
             <Icon name={"lucide:book-open-text"} size={18} />
             Read the docs</a
           >
+        </div>
+      </section>
+
+      <section>
+        <h4 class="text-center mt-40 text-2xl font-medium">
+          One more thing...
+        </h4>
+        <div class="h-96 flex justify-center items-center relative mt-10">
+          <img
+            class="rounded-xl w-full h-full object-cover"
+            src="/stickers.jpg"
+          />
+          <h2
+            class="text-center absolute mt-5 text-5xl font-black outline backdrop-blur-xl bg-black/60 p-3 rounded-xl text-white"
+          >
+            Free Stickers!
+          </h2>
+          <button
+            class="absolute bottom-14 bg-primary text-white p-3 rounded-xl hover:scale-[1.05] transition-all ease-in-out duration-300"
+          >
+            Claim now
+          </button>
         </div>
       </section>
     </div>
